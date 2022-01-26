@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Keyframes */
+
+@keyframes buttonHover{
+    from {
+        background-position-x: 100%;
+    }
+
+    to {
+        background-position-x: 0%;
+    }
+}
+
+@keyframes buttonHoverReverse{
+    from {
+        background-position-x: 0%;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+/* Mains styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    color: #FF9150;
+}
+
+h1 {
+    color: #FF9150;
+    font-size: 2.1em;
+    margin-bottom: 0.2em;
+}
+
+h2, h3 {
+    color: black;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.black-text {
+    color: black;
+}
+
+button {
+    display: inline-block;
+    color: white;
+    border: none;
+    background: linear-gradient(100deg, rgba(255,71,87,1) 0%, rgba(255,123,82,1) 30%, rgba(255,145,80,1) 50%, rgba(255,124,82,1) 70%, rgba(255,71,87,1) 100%);
+    background-size: 200% 200%;
+    background-position-x: 100%;
+    border-radius: 0.2em;
+    animation: 300ms ease-in-out 0s 1 normal forwards buttonHoverReverse;
+}
+
+button:hover {
+    animation: 300ms ease-in-out 0s 1 normal forwards buttonHover;
+}
+
+
+/* Classes styles */
+
+.main-div {
+    background-color: #FF9150;
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2.5em;
+}
+
+.logo {
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.content {
+    background-color: white;
+    max-width: 600px;
+    width: 90%;
+    height: 100%;
+    color: grey;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.ban {
+    transform: translateY(-15%);
+    position: relative;
+}
+
+.illustration {
+    width: 100%;
+}
+
+.planet {
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    top: 11%;
+    left: 14%;
+}
+
+.main-content {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85em;
+}
+
+.greetings {
+    display: block;
+    width: 80%;
+}
+
+.radio-button {
+    height: 50px;
+    width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.4em;
+    margin: 50px auto;
+}
+
+.video {
+   display: flex;
+   align-items: center;
+   margin-bottom: 2.5em;
+}
+
+.video-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF2ED;
+    height: 120px;
+    flex: 1 0 25%;
+    border-radius: 0.4em;
+}
+
+.more-infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-infos > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+
+.infos-icon {
+    width: 40px;
+}
+
+.infos-icon > img{
+    width: 40px;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+.contact {
+    background-color: #FFF2ED;
+    width: 100%;
+}
+
+.contact-content {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 0.9em;
+}
+
+.contact-button {
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.socials {
+    max-width: 600px;
+    width: 90%;
+    height: 50px;
+    background-color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.socials-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    padding: 0.3em;
+}
+
+.general-informations {
+    max-width: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.55em;
+}
+
+.general-informations > p{
+    margin-top: 2em;
+}
+
+.general-informations > p > a{
+    color: white;
+}
+
+/* media queries */
+
+@media (max-width: 700px) {
+    .planet {
+        left: 8.5%;
+    } 
+
+    .radio-button {
+        box-shadow: none;
+    }
+
+    .video {
+        flex-wrap: wrap;
+    }
+
+    .video-link {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 0.5em;
+    }
+
+    .more-infos {
+        flex-direction: column;
+    }
+    
+    .more-infos > div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .infos-icon, .infos-icon > img {
+        width: 50px;
+    }
+    
+    .infos-text {
+        width: 70%;
+    }
+
+    .contact-content {
+        width: 90%;
+    }
+}
+
+@media (min-width: 701px) {
+
+    .video-description {
+        padding-left: 1.5em;
+    }
+
+    .more-infos > div {
+        width: 45%;
+    }
+
+}
